@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LunaCurl™ — Wake Up to Perfect Curls, Zero Heat Damage</title>
+<meta name="description" content="Wake up to beautiful, bouncy curls without heat damage. Our silk heatless curler creates salon-quality curls while you sleep. Free shipping. 30-day guarantee.">
+<meta name="keywords" content="heatless hair curler, overnight curls, no heat curlers, silk curling rod, heatless waves, hair care, damage free curls, satin curler">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fdf8f5;
+  --bg-card: #ffffff;
+  --text: #2d2320;
+  --text-light: #6b5e5a;
+  --accent: #c97b6b;
+  --accent-dark: #b56353;
+  --accent-light: #f5e4df;
+  --gold: #d4a853;
+  --border: #e8ddd6;
+  --success: #5b8a6f;
+  --shadow: 0 2px 16px rgba(45,35,32,0.06);
+  --shadow-lg: 0 8px 40px rgba(45,35,32,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+/* ANNOUNCEMENT BAR */
+.announcement { background: var(--text); color: #fff; text-align: center; padding: 8px 16px; font-size: 13px; letter-spacing: 0.3px; }
+.announcement span { color: var(--gold); font-weight: 600; }
+
+/* NAV */
+nav { background: var(--bg-card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; padding: 0 24px; }
+.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+.logo span { color: var(--accent); }
+.nav-actions { display: flex; gap: 16px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.25s; text-decoration: none; border: none; font-family: inherit; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(201,123,107,0.35); }
+.btn-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
+.btn-outline:hover { background: var(--accent); color: #fff; }
+.btn-lg { padding: 16px 36px; font-size: 16px; }
+.cart-count { background: var(--accent); color: #fff; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
+
+/* HERO */
+.hero { max-width: 1200px; margin: 0 auto; padding: 60px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.hero-content h1 { font-family: 'Playfair Display', serif; font-size: 48px; line-height: 1.15; margin-bottom: 20px; color: var(--text); }
+.hero-content h1 span { color: var(--accent); }
+.hero-content p { font-size: 17px; color: var(--text-light); margin-bottom: 28px; line-height: 1.7; }
+.hero-badges { display: flex; gap: 20px; margin-bottom: 32px; flex-wrap: wrap; }
+.badge { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-light); }
+.badge svg { width: 20px; height: 20px; color: var(--success); flex-shrink: 0; }
+.price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
+.old-price { font-size: 20px; text-decoration: line-through; color: var(--text-light); text-decoration-color: var(--accent); }
+.current-price { font-size: 42px; font-weight: 700; color: var(--text); }
+.hero-image { position: relative; }
+.hero-image img { width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg); }
+.hero-tag { position: absolute; top: -12px; right: -12px; background: var(--success); color: #fff; padding: 10px 18px; border-radius: 50px; font-weight: 700; font-size: 14px; box-shadow: 0 4px 12px rgba(91,138,111,0.3); animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+/* SECTION */
+section { padding: 80px 24px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 48px; }
+.section-title h2 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 12px; }
+.section-title p { color: var(--text-light); font-size: 17px; max-width: 600px; margin: 0 auto; }
+
+/* FEATURES */
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.feature-card { background: var(--bg-card); border-radius: 16px; padding: 32px 24px; text-align: center; border: 1px solid var(--border); transition: transform 0.25s; }
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.feature-icon { font-size: 36px; margin-bottom: 16px; }
+.feature-card h3 { font-size: 16px; margin-bottom: 8px; }
+.feature-card p { font-size: 14px; color: var(--text-light); }
+
+/* BEFORE/AFTER */
+.transform { background: #fff; }
+.transform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.transform-image img { width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg); }
+.transform-text h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 16px; }
+.transform-text p { color: var(--text-light); margin-bottom: 24px; font-size: 16px; }
+.transform-list { list-style: none; }
+.transform-list li { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 15px; }
+.transform-list li::before { content: '✓'; color: var(--success); font-weight: 700; font-size: 18px; }
+
+/* UGC GALLERY */
+.ugc { background: var(--bg); }
+.ugc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.ugc-card { background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
+.ugc-card img { width: 100%; aspect-ratio: 9/16; object-fit: cover; }
+.ugc-card-content { padding: 16px 20px; }
+.ugc-user { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.ugc-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); font-size: 13px; }
+.ugc-name { font-weight: 600; font-size: 14px; }
+.ugc-stars { color: var(--gold); font-size: 13px; }
+.ugc-text { font-size: 13px; color: var(--text-light); }
+
+/* PRICING */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.pricing-card { background: var(--bg-card); border-radius: 20px; padding: 36px 28px; border: 2px solid var(--border); text-align: center; transition: all 0.3s; position: relative; }
+.pricing-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.pricing-card.featured { border-color: var(--accent); background: linear-gradient(180deg, #fdf8f6 0%, #fff 100%); }
+.pricing-card.featured::before { content: 'BEST VALUE'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; padding: 4px 20px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+.pricing-name { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.pricing-desc { font-size: 13px; color: var(--text-light); margin-bottom: 16px; }
+.pricing-price { font-size: 40px; font-weight: 700; margin-bottom: 4px; }
+.pricing-price small { font-size: 16px; color: var(--text-light); }
+.pricing-save { color: var(--success); font-size: 13px; font-weight: 600; margin-bottom: 20px; min-height: 20px; }
+.pricing-features { list-style: none; text-align: left; margin-bottom: 24px; }
+.pricing-features li { padding: 6px 0; font-size: 14px; display: flex; align-items: center; gap: 8px; color: var(--text-light); }
+.pricing-features li::before { content: '✓'; color: var(--success); font-weight: 700; }
+
+/* TESTIMONIALS */
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.testimonial-card { background: var(--bg-card); border-radius: 16px; padding: 28px; border: 1px solid var(--border); }
+.testimonial-stars { color: var(--gold); margin-bottom: 12px; font-size: 14px; }
+.testimonial-card h4 { font-size: 15px; margin-bottom: 8px; }
+.testimonial-card p { font-size: 14px; color: var(--text-light); font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 10px; margin-top: 16px; }
+.testimonial-author strong { font-size: 14px; }
+.testimonial-author small { font-size: 12px; color: var(--text-light); display: block; }
+.verified { color: var(--success); font-size: 12px; font-weight: 600; }
+
+/* FAQ */
+.faq { background: #fff; }
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+.faq-q { font-weight: 600; font-size: 17px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); }
+.faq-q::after { content: '+'; font-size: 24px; color: var(--accent); transition: transform 0.3s; }
+.faq-a { font-size: 15px; color: var(--text-light); padding-top: 12px; display: none; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+/* GUARANTEE */
+.guarantee { text-align: center; background: linear-gradient(135deg, var(--accent-light) 0%, #fdf5f3 100%); border-radius: 24px; margin: 0 24px; }
+.guarantee-inner { max-width: 700px; margin: 0 auto; padding: 48px 24px; }
+.guarantee-inner h2 { font-family: 'Playfair Display', serif; font-size: 30px; margin-bottom: 12px; }
+.guarantee-inner p { color: var(--text-light); font-size: 15px; }
+
+/* CTA */
+.cta { text-align: center; }
+.cta h2 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 16px; }
+.cta p { color: var(--text-light); margin-bottom: 28px; font-size: 17px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+/* FOOTER */
+footer { background: var(--text); color: #c4b5ae; padding: 48px 24px 24px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.footer-brand p { margin: 16px 0; font-size: 14px; }
+.footer-col h4 { color: #fff; font-size: 14px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+.footer-col a { color: #c4b5ae; text-decoration: none; font-size: 14px; display: block; margin-bottom: 8px; transition: color 0.2s; }
+.footer-col a:hover { color: #fff; }
+.footer-bottom { max-width: 1200px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; }
+
+/* CART SIDEBAR */
+.cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; display: none; }
+.cart-overlay.active { display: block; }
+.cart-sidebar { position: fixed; top: 0; right: -420px; width: 400px; height: 100vh; background: var(--bg-card); z-index: 201; transition: right 0.35s ease; display: flex; flex-direction: column; box-shadow: -4px 0 30px rgba(0,0,0,0.15); }
+.cart-sidebar.active { right: 0; }
+.cart-header { padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.cart-header h3 { font-size: 18px; }
+.cart-close { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text); }
+.cart-items { flex: 1; overflow-y: auto; padding: 16px 24px; }
+.cart-item { display: flex; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+.cart-item img { width: 70px; height: 70px; object-fit: cover; border-radius: 10px; }
+.cart-item-info { flex: 1; }
+.cart-item-info h4 { font-size: 14px; margin-bottom: 4px; }
+.cart-item-info p { font-size: 13px; color: var(--text-light); }
+.cart-qty { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+.cart-qty button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border); background: #fff; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+.cart-remove { background: none; border: none; color: var(--accent); cursor: pointer; font-size: 13px; margin-top: 8px; }
+.cart-footer { padding: 20px 24px; border-top: 1px solid var(--border); }
+.cart-total { display: flex; justify-content: space-between; font-weight: 700; font-size: 18px; margin-bottom: 16px; }
+.cart-empty { text-align: center; padding: 60px 20px; color: var(--text-light); }
+
+/* TOAST */
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--text); color: #fff; padding: 14px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; z-index: 300; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+.toast.show { opacity: 1; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; gap: 32px; padding: 32px 20px; }
+  .hero-content h1 { font-size: 32px; }
+  .current-price { font-size: 32px; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .ugc-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .transform-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .cart-sidebar { width: 100%; right: -100%; }
+  .announcement { font-size: 12px; }
+}
+
+@media (max-width: 600px) {
+  .features-grid { grid-template-columns: 1fr; }
+  .hero-badges { flex-direction: column; gap: 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement">🎁 <span>FREE SHIPPING</span> on all orders + 30-Day Money Back Guarantee</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Luna<span>Curl</span>™</div>
+    <div class="nav-actions">
+      <button class="btn btn-outline" onclick="openCart()">
+        🛒 Cart <span class="cart-count" id="cart-count-badge">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">Your cart is empty.<br>Add a product to get started!</div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="checkout()">Checkout →</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Wake Up to <span>Perfect Curls</span> — Zero Heat, Zero Damage</h1>
+    <p>The silk heatless curling set that gives you salon-quality bouncy curls while you sleep. No hot tools needed. Just wrap, sleep, and wake up beautiful.</p>
+    <div class="hero-badges">
+      <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Zero Heat Damage</div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Works While You Sleep</div>
+      <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> All Hair Types</div>
+    </div>
+    <div class="price-row">
+      <span class="old-price">$39.99</span>
+      <span class="current-price">$19.99</span>
+    </div>
+    <button class="btn btn-primary btn-lg" onclick="addToCart('Premium Curler Set', 19.99, 'https://sc02.alicdn.com/kf/A39d9ade6d1e944aeb8410bd76b40df67K.png')">Add to Cart — $19.99</button>
+    <p style="font-size:13px;color:var(--text-light);margin-top:12px;">💰 30-Day Money-Back Guarantee • 📦 Free Shipping Worldwide</p>
+  </div>
+  <div class="hero-image">
+    <img src="https://sc02.alicdn.com/kf/A39d9ade6d1e944aeb8410bd76b40df67K.png" alt="LunaCurl Heatless Hair Curler Set" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22500%22><rect fill=%22%23f5e4df%22 width=%22500%22 height=%22500%22/><text x=%22250%22 y=%22240%22 text-anchor=%22middle%22 font-size=%2260%22>🦱</text><text x=%22250%22 y=%22280%22 text-anchor=%22middle%22 font-size=%2214%22 fill=%22%23999%22>LunaCurl™ Set</text></svg>'">
+    <div class="hero-tag">🔥 Trending Now</div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <div class="section-inner">
+    <div class="section-title">
+      <h2>Why Women Are Obsessed</h2>
+      <p>The heatless revolution that's taking over TikTok — over 500 million views and counting</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Zero Heat Damage</h3>
+        <p>No more burning your hair at 230°C. Our silk curler protects every strand while you sleep.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⏰</div>
+        <h3>5 Minutes at Night</h3>
+        <p>Just wrap your hair before bed. Wake up with perfect curls — no morning rush.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💎</div>
+        <h3>Premium Silk Satin</h3>
+        <p>Ultra-soft material that glides through hair without pulling, tugging, or frizzing.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>All Hair Types</h3>
+        <p>Works on short, long, straight, wavy, and curly hair. Everyone gets perfect results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section class="transform">
+  <div class="section-inner">
+    <div class="transform-grid">
+      <div class="transform-image">
+        <img src="https://sc02.alicdn.com/kf/Aaa453b9e6918459ca4688cbda417bfdcM.png" alt="Before and After LunaCurl Results" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22500%22><rect fill=%22%23fdf8f5%22 width=%22250%22 height=%22500%22/><text x=%22125%22 y=%22240%22 text-anchor=%22middle%22 font-size=%2236%22>💇‍♀️</text><text x=%22125%22 y=%22280%22 text-anchor=%22middle%22 font-size=%2213%22 fill=%22%23999%22>BEFORE</text><rect fill=%22%23fdf8f5%22 x=%22250%22 width=%22250%22 height=%22500%22/><text x=%22375%22 y=%22240%22 text-anchor=%22middle%22 font-size=%2236%22>💁‍♀️</text><text x=%22375%22 y=%22280%22 text-anchor=%22middle%22 font-size=%2213%22 fill=%22%23999%22>AFTER</text></svg>'">
+      </div>
+      <div class="transform-text">
+        <h2>Real Results — Overnight</h2>
+        <p>This isn't magic. It's just smarter hair care. Our heatless curling system works with your hair's natural texture to create lasting curls without a single degree of heat.</p>
+        <ul class="transform-list">
+          <li>Bouncy curls that last all day</li>
+          <li>No heat damage, no split ends</li>
+          <li>Softer, shinier, healthier hair over time</li>
+          <li>Works on damp or dry hair</li>
+          <li>Saves $500+/year on salon visits</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UGC SOCIAL PROOF -->
+<section class="ugc">
+  <div class="section-inner">
+    <div class="section-title">
+      <h2>Real Women, Real Results</h2>
+      <p>See what happens when you swap hot tools for silk</p>
+    </div>
+    <div class="ugc-grid">
+      <div class="ugc-card">
+        <img src="https://sc02.alicdn.com/kf/Aa09beec3855a4d7aacd57350be02fb36h.png" alt="Night routine with LunaCurl" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22700%22><rect fill=%22%232d2320%22 width=%22400%22 height=%22700%22/><text x=%22200%22 y=%22340%22 text-anchor=%22middle%22 font-size=%2250%22>🌙</text><text x=%22200%22 y=%22390%22 text-anchor=%22middle%22 font-size=%2214%22 fill=%22%23c4b5ae%22>Night Routine</text></svg>'">
+        <div class="ugc-card-content">
+          <div class="ugc-user">
+            <div class="ugc-avatar">S</div>
+            <div>
+              <div class="ugc-name">Sarah M.</div>
+              <div class="ugc-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="ugc-text">"5 minutes before bed and I wake up like I went to a salon. My hair has never been healthier!"</div>
+        </div>
+      </div>
+      <div class="ugc-card">
+        <img src="https://sc02.alicdn.com/kf/A73af2bca118b41e6a9a2e3315da28a74X.png" alt="Morning results with LunaCurl" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22700%22><rect fill=%22%23fdf8f5%22 width=%22400%22 height=%22700%22/><text x=%22200%22 y=%22340%22 text-anchor=%22middle%22 font-size=%2250%22>☀️</text><text x=%22200%22 y=%22390%22 text-anchor=%22middle%22 font-size=%2214%22 fill=%22%23999%22>Morning Results</text></svg>'">
+        <div class="ugc-card-content">
+          <div class="ugc-user">
+            <div class="ugc-avatar">J</div>
+            <div>
+              <div class="ugc-name">Jessica L.</div>
+              <div class="ugc-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="ugc-text">"OMG I can't believe this is real! Perfect curls EVERY morning. Threw away my curling iron!"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-inner">
+    <div class="section-title">
+      <h2>Choose Your Perfect Set</h2>
+      <p>One-time purchase. Free shipping. 30-day guarantee.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Basic -->
+      <div class="pricing-card">
+        <div class="pricing-name">Basic Curler</div>
+        <div class="pricing-desc">1 Silk Curling Rod</div>
+        <div class="pricing-price">$14.99</div>
+        <div class="pricing-save">&nbsp;</div>
+        <ul class="pricing-features">
+          <li>1 Premium Silk Curling Rod</li>
+          <li>2 Satin Scrunchies</li>
+          <li>Instruction Guide</li>
+          <li>Free Shipping</li>
+        </ul>
+        <button class="btn btn-outline" style="width:100%;justify-content:center;" onclick="addToCart('Basic Curler', 14.99, 'https://sc02.alicdn.com/kf/A39d9ade6d1e944aeb8410bd76b40df67K.png')">Add to Cart</button>
+      </div>
+      <!-- Premium -->
+      <div class="pricing-card featured">
+        <div class="pricing-name">Premium Set</div>
+        <div class="pricing-desc">Complete Hair Care Kit</div>
+        <div class="pricing-price">$19.99</div>
+        <div class="pricing-save">Save $20</div>
+        <ul class="pricing-features">
+          <li>2 Silk Curling Rods</li>
+          <li>Silk Pillowcase</li>
+          <li>Satin Sleep Cap</li>
+          <li>4 Satin Scrunchies</li>
+          <li>Travel Pouch</li>
+          <li>Video Tutorial Access</li>
+          <li>Free Shipping</li>
+        </ul>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="addToCart('Premium Set', 19.99, 'https://sc02.alicdn.com/kf/A39d9ade6d1e944aeb8410bd76b40df67K.png')">Add to Cart — $19.99</button>
+      </div>
+      <!-- Ultimate Bundle -->
+      <div class="pricing-card">
+        <div class="pricing-name">Ultimate Bundle</div>
+        <div class="pricing-desc">2 Sets + Bonus Gifts</div>
+        <div class="pricing-price">$34.99</div>
+        <div class="pricing-save">Save $44.98</div>
+        <ul class="pricing-features">
+          <li>Everything in Premium ×2</li>
+          <li>Perfect for Gifting</li>
+          <li>Bonus: Sleep Mask</li>
+          <li>Bonus: Hair Oil Sample</li>
+          <li>Priority Support</li>
+          <li>Free Express Shipping</li>
+        </ul>
+        <button class="btn btn-outline" style="width:100%;justify-content:center;" onclick="addToCart('Ultimate Bundle', 34.99, 'https://sc02.alicdn.com/kf/A39d9ade6d1e944aeb8410bd76b40df67K.png')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="section-inner">
+    <div class="section-title">
+      <h2>Loved by Thousands</h2>
+      <p>Join 50,000+ women who transformed their hair</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <h4>Finally healthy hair!</h4>
+        <p>"I used to straighten and curl my hair every day. My ends were fried. After 2 weeks with LunaCurl, my hair feels like silk and the curls last ALL day."</p>
+        <div class="testimonial-author">
+          <div class="ugc-avatar">E</div>
+          <div><strong>Emily R.</strong><small class="verified">✓ Verified Buyer</small></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <h4>Best purchase of 2026</h4>
+        <p>"I was skeptical but WOW. I wrapped my hair, went to sleep, and woke up looking like I spent $200 at a salon. My roommate ordered one the same day."</p>
+        <div class="testimonial-author">
+          <div class="ugc-avatar">A</div>
+          <div><strong>Aisha K.</strong><small class="verified">✓ Verified Buyer</small></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <h4>Works on thick curly hair</h4>
+        <p>"I have thick 3C curls and was sure this wouldn't work for me. It gave me the most gorgeous defined ringlets. I'm NEVER using heat again."</p>
+        <div class="testimonial-author">
+          <div class="ugc-avatar">M</div>
+          <div><strong>Maria G.</strong><small class="verified">✓ Verified Buyer</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-inner">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How does the heatless curler work?</div>
+        <div class="faq-a">Simply wrap sections of your slightly damp or dry hair around the silk rod before bed. The rod holds your hair in a curl shape overnight. In the morning, unwrap and you'll have beautiful, bouncy curls — no heat, no damage!</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Does it work on all hair types?</div>
+        <div class="faq-a">Yes! LunaCurl works on all hair types — straight, wavy, curly, coily, short, long, thin, or thick. The key is adjusting how you wrap and how damp your hair is. Our video tutorial covers every hair type.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How long do the curls last?</div>
+        <div class="faq-a">Most customers report curls lasting all day (8-12 hours). For extra hold, use on slightly damp hair with a light mousse or setting spray before wrapping. Results get better as your hair gets used to the routine!</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">What's included in the Premium Set?</div>
+        <div class="faq-a">The Premium Set includes 2 silk curling rods, a silk pillowcase (for extra hair protection), a satin sleep cap, 4 satin scrunchies, a travel pouch, and access to our exclusive video tutorial library.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">How long does shipping take?</div>
+        <div class="faq-a">Shipping to the US typically takes 7-14 business days. Express shipping (3-7 days) is available for the Ultimate Bundle. All orders come with free standard shipping and a tracking number.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">What if I don't like it?</div>
+        <div class="faq-a">We offer a 30-day money-back guarantee. If you're not absolutely in love with your LunaCurl, simply return it for a full refund. No questions asked.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="guarantee-inner">
+    <h2>🛡️ Try It Risk-Free for 30 Days</h2>
+    <p>If you don't wake up with the best curls of your life, we'll refund every penny. No questions, no hassle — just beautiful hair or your money back.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="section-inner">
+    <h2>Ready to Wake Up Beautiful?</h2>
+    <p>Join 50,000+ women who ditched heat damage and woke up to perfect curls. Your hair deserves this.</p>
+    <button class="btn btn-primary btn-lg" onclick="addToCart('Premium Set', 19.99, 'https://sc02.alicdn.com/kf/A39d9ade6d1e944aeb8410bd76b40df67K.png'); openCart();">Get Your LunaCurl™ Now →</button>
+    <p style="font-size:13px;color:var(--text-light);margin-top:16px;">💰 30-Day Guarantee • 📦 Free Worldwide Shipping • 🔒 Secure Checkout</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Luna<span>Curl</span>™</div>
+      <p>The smarter way to beautiful curls. Zero heat, zero damage, 100% confidence. Made for women who want gorgeous hair without compromising its health.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#pricing">Basic Curler</a>
+      <a href="#pricing">Premium Set</a>
+      <a href="#pricing">Ultimate Bundle</a>
+      <a href="#">Track Order</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Contact Us</a>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Return Policy</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LunaCurl™. All rights reserved. | This is a dropshipping demo store.</p>
+  </div>
+</footer>
+
+<script>
+// CART STATE
+let cart = [];
+
+function addToCart(name, price, img) {
+  const existing = cart.find(i => i.name === name);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ name, price, qty: 1, img });
+  }
+  updateCart();
+  showToast('✅ Added to cart!');
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+function updateQty(index, delta) {
+  cart[index].qty += delta;
+  if (cart[index].qty <= 0) {
+    cart.splice(index, 1);
+  }
+  updateCart();
+}
+
+function updateCart() {
+  const count = cart.reduce((s, i) => s + i.qty, 0);
+  document.getElementById('cart-count-badge').textContent = count;
+
+  const itemsEl = document.getElementById('cartItems');
+  const footerEl = document.getElementById('cartFooter');
+  const totalEl = document.getElementById('cartTotal');
+
+  if (cart.length === 0) {
+    itemsEl.innerHTML = '<div class="cart-empty">Your cart is empty.<br>Add a product to get started!</div>';
+    footerEl.style.display = 'none';
+  } else {
+    itemsEl.innerHTML = cart.map((item, i) => `
+      <div class="cart-item">
+        <img src="${item.img}" alt="${item.name}" onerror="this.style.background='var(--accent-light)';this.style.display='block';">
+        <div class="cart-item-info">
+          <h4>${item.name}</h4>
+          <p>$${item.price.toFixed(2)}</p>
+          <div class="cart-qty">
+            <button onclick="updateQty(${i}, -1)">−</button>
+            <span>${item.qty}</span>
+            <button onclick="updateQty(${i}, 1)">+</button>
+          </div>
+          <button class="cart-remove" onclick="removeFromCart(${i})">Remove</button>
+        </div>
+      </div>
+    `).join('');
+    footerEl.style.display = 'block';
+  }
+
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  totalEl.textContent = '$' + total.toFixed(2);
+}
+
+function openCart() {
+  document.getElementById('cartOverlay').classList.add('active');
+  document.getElementById('cartSidebar').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  document.getElementById('cartOverlay').classList.remove('active');
+  document.getElementById('cartSidebar').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function checkout() {
+  if (cart.length === 0) return;
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const items = cart.map(i => `${i.name} x${i.qty} - $${(i.price*i.qty).toFixed(2)}`).join('\n');
+  showToast(`🛒 Order placed! Total: $${total.toFixed(2)}\n(This is a demo — integrate PayPal/Stripe to go live)`);
+  cart = [];
+  updateCart();
+  closeCart();
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+</script>
+
+</body>
+</html>
